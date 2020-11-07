@@ -3,6 +3,11 @@ Projeto da aula de Laboratório de Engenharia de Software, onde o objetivo seria
 
 
 O projeto Bloodye foi criado por mim, Lucas Pereira, com o objetivo de ser um aplicativo de gerenciamento de hemocentros e doadores cadastrados.
+
+<p align="center">
+    <img src="Assets/Images/Tela1.png" width="250"/>
+</p>
+
 ## Funcionalidades
 *   [ ] Sistema de Login.
 *   [ ] Gerenciar Hemocentros.
