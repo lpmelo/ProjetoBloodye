@@ -1,0 +1,14 @@
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\bin\Debug\ProjetoBloodye.exe.config
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\bin\Debug\ProjetoBloodye.exe
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\bin\Debug\ProjetoBloodye.pdb
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.Admin.resources
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Inicio.resources
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Properties.Resources.resources
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.csproj.GenerateResource.cache
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.csproj.CoreCompileInputs.cache
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.exe
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.pdb
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.FormSobre.resources
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.csprojAssemblyReference.cache
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.FormGSD.resources
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\bin\Debug\bd\Administradores.accdb
