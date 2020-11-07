@@ -1,10 +1,10 @@
 # Projeto Bloodye
 Projeto da aula de Laboratório de Engenharia de Software, onde o objetivo seria desenvolver um app de acordo com nossos interesses.
 ## Funcionalidades
-*   [] Sistema de Login.
-*   [] Gerenciar Hemocentros.
-*   [] Gerenciar Doadores.
-*   [] Ajuda para o usuário.
+*   [ ] Sistema de Login.
+*   [ ] Gerenciar Hemocentros.
+*   [ ] Gerenciar Doadores.
+*   [ ] Ajuda para o usuário.
 *   [x] Sobre o projeto.
 ## Licença
 	Copyright 2020 Lucas Pereira Melo
