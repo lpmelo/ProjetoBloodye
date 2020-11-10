@@ -1,13 +1,17 @@
-﻿using ProjetoBloodye.Pages.adm.ChildForms;
+﻿using ProjetoBloodye.cbd;
+using ProjetoBloodye.Pages.adm.ChildForms;
 using System;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace ProjetoBloodye.Pages
 {
     public partial class Admin : Form
     {
-        public Admin()
+        private Inicio principal;
+        public Admin(Inicio frm)
         {
+            principal = frm;
             InitializeComponent();
             CustomizeDesing();
 
@@ -99,6 +103,7 @@ namespace ProjetoBloodye.Pages
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            principal.Show();
             this.Close();
         }
 

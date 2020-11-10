@@ -51,6 +51,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cbd\Comandos.cs" />
     <Compile Include="Pages\adm\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
