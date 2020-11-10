@@ -6,7 +6,9 @@ O projeto Bloodye foi criado por mim, Lucas Pereira, com o objetivo de ser um ap
 
 <p align="center">
     <img src="Assets/Images/Tela1.png" width="250"/>
-	<img src="Assets/Images/Tela2.png" width="490"/>
+	<img src="Assets/Images/Tela2.png" width="250"/>
+	<img src="Assets/Images/Tela3.png" width="250"/>
+	<img src="Assets/Images/Tela4.png" width="490"/>
 </p>
 
 ## Funcionalidades
