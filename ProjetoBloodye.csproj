@@ -64,6 +64,12 @@
     <Compile Include="Pages\adm\ChildForms\FormGSD.Designer.cs">
       <DependentUpon>FormGSD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\adm\ChildForms\FormPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\adm\ChildForms\FormPD.Designer.cs">
+      <DependentUpon>FormPD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\adm\ChildForms\FormSobre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\adm\ChildForms\FormGSD.resx">
       <DependentUpon>FormGSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\adm\ChildForms\FormPD.resx">
+      <DependentUpon>FormPD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\adm\ChildForms\FormSobre.resx">
       <DependentUpon>FormSobre.cs</DependentUpon>

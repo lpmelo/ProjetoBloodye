@@ -54,6 +54,7 @@ namespace ProjetoBloodye.Pages
         private void btnSDProcurar_Click(object sender, EventArgs e)
         {
             HideSubMenu(subMenuP1);
+            openChildForm(new FormPD());
         }
 
         private void btnSDContato_Click(object sender, EventArgs e)
