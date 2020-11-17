@@ -45,12 +45,12 @@
             this.celularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.doadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.administradoresDataSet1 = new ProjetoBloodye.AdministradoresDataSet1();
+            this.administradoresDataSet1 = new ProjetoBloodye.data.AdministradoresDataSet1();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnValidar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.doadoresTableAdapter = new ProjetoBloodye.AdministradoresDataSet1TableAdapters.DoadoresTableAdapter();
+            this.doadoresTableAdapter = new ProjetoBloodye.data.AdministradoresDataSet1TableAdapters.DoadoresTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doadoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administradoresDataSet1)).BeginInit();
@@ -293,9 +293,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnValidar;
         private System.Windows.Forms.Button button4;
-        private AdministradoresDataSet1 administradoresDataSet1;
+        private data.AdministradoresDataSet1 administradoresDataSet1;
         private System.Windows.Forms.BindingSource doadoresBindingSource;
-        private AdministradoresDataSet1TableAdapters.DoadoresTableAdapter doadoresTableAdapter;
+        private data.AdministradoresDataSet1TableAdapters.DoadoresTableAdapter doadoresTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rGDataGridViewTextBoxColumn;

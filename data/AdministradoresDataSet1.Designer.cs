@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace ProjetoBloodye {
+namespace ProjetoBloodye.data {
     
     
     /// <summary>
@@ -937,7 +937,7 @@ namespace ProjetoBloodye {
         }
     }
 }
-namespace ProjetoBloodye.AdministradoresDataSet1TableAdapters {
+namespace ProjetoBloodye.data.AdministradoresDataSet1TableAdapters {
     
     
     /// <summary>

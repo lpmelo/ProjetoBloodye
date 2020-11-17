@@ -46,12 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministradoresDataSet.Designer.cs">
+    <Compile Include="data\AdministradoresDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="AdministradoresDataSet1.Designer.cs">
+    <Compile Include="data\AdministradoresDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AdministradoresDataSet1.xsd</DependentUpon>
@@ -123,26 +123,26 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="AdministradoresDataSet.xsc">
+    <None Include="data\AdministradoresDataSet.xsc">
       <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AdministradoresDataSet.xsd">
+    <None Include="data\AdministradoresDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>AdministradoresDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="AdministradoresDataSet.xss">
+    <None Include="data\AdministradoresDataSet.xss">
       <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AdministradoresDataSet1.xsc">
+    <None Include="data\AdministradoresDataSet1.xsc">
       <DependentUpon>AdministradoresDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="AdministradoresDataSet1.xsd">
+    <None Include="data\AdministradoresDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>AdministradoresDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="AdministradoresDataSet1.xss">
+    <None Include="data\AdministradoresDataSet1.xss">
       <DependentUpon>AdministradoresDataSet1.xsd</DependentUpon>
     </None>
     <None Include="bd\AdministradoresDataSet.xsc">
