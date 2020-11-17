@@ -19,7 +19,8 @@ namespace ProjetoBloodye
             Comandos comandos = new Comandos();
             try
             {
-                string Stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Projetos\ProjetoBloodye\ProjetoBloodye\bd\Administradores.accdb";
+                string local = "bd/Administradores.accdb";
+                string Stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+local+";Persist Security Info=False;";
                 OleDbConnection conn = new OleDbConnection(Stringcon);
                 conn.Open();
                 comandos.conectado = true;

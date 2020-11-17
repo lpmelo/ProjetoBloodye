@@ -30,6 +30,12 @@
         {
             this.cbEscolhaPD = new System.Windows.Forms.ComboBox();
             this.labelCB = new System.Windows.Forms.Label();
+            this.tbPesTS = new System.Windows.Forms.TextBox();
+            this.tbPesNome = new System.Windows.Forms.TextBox();
+            this.tbPesCPF = new System.Windows.Forms.TextBox();
+            this.lbTS = new System.Windows.Forms.Label();
+            this.lbNome = new System.Windows.Forms.Label();
+            this.lbCPF = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbEscolhaPD
@@ -61,12 +67,72 @@
             this.labelCB.TabIndex = 1;
             this.labelCB.Text = "Escolha uma pesquisa";
             // 
+            // tbPesTS
+            // 
+            this.tbPesTS.Location = new System.Drawing.Point(12, 50);
+            this.tbPesTS.Name = "tbPesTS";
+            this.tbPesTS.Size = new System.Drawing.Size(151, 20);
+            this.tbPesTS.TabIndex = 2;
+            // 
+            // tbPesNome
+            // 
+            this.tbPesNome.Location = new System.Drawing.Point(12, 50);
+            this.tbPesNome.Name = "tbPesNome";
+            this.tbPesNome.Size = new System.Drawing.Size(151, 20);
+            this.tbPesNome.TabIndex = 3;
+            // 
+            // tbPesCPF
+            // 
+            this.tbPesCPF.Location = new System.Drawing.Point(12, 50);
+            this.tbPesCPF.Name = "tbPesCPF";
+            this.tbPesCPF.Size = new System.Drawing.Size(151, 20);
+            this.tbPesCPF.TabIndex = 4;
+            // 
+            // lbTS
+            // 
+            this.lbTS.AutoSize = true;
+            this.lbTS.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lbTS.Location = new System.Drawing.Point(9, 73);
+            this.lbTS.Name = "lbTS";
+            this.lbTS.Size = new System.Drawing.Size(243, 13);
+            this.lbTS.TabIndex = 5;
+            this.lbTS.Text = "Você esta procurando pelo Tipo Sanguíneo";
+            // 
+            // lbNome
+            // 
+            this.lbNome.AutoSize = true;
+            this.lbNome.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lbNome.Location = new System.Drawing.Point(9, 73);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(187, 13);
+            this.lbNome.TabIndex = 6;
+            this.lbNome.Text = "Você esta procurando pelo Nome";
+            // 
+            // lbCPF
+            // 
+            this.lbCPF.AutoSize = true;
+            this.lbCPF.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lbCPF.Location = new System.Drawing.Point(9, 73);
+            this.lbCPF.Name = "lbCPF";
+            this.lbCPF.Size = new System.Drawing.Size(179, 13);
+            this.lbCPF.TabIndex = 7;
+            this.lbCPF.Text = "Você esta procurando pelo CPF";
+            // 
             // FormPD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(748, 622);
+            this.Controls.Add(this.lbCPF);
+            this.Controls.Add(this.lbNome);
+            this.Controls.Add(this.lbTS);
+            this.Controls.Add(this.tbPesCPF);
+            this.Controls.Add(this.tbPesNome);
+            this.Controls.Add(this.tbPesTS);
             this.Controls.Add(this.labelCB);
             this.Controls.Add(this.cbEscolhaPD);
             this.Name = "FormPD";
@@ -80,5 +146,11 @@
 
         private System.Windows.Forms.ComboBox cbEscolhaPD;
         private System.Windows.Forms.Label labelCB;
+        private System.Windows.Forms.TextBox tbPesTS;
+        private System.Windows.Forms.TextBox tbPesNome;
+        private System.Windows.Forms.TextBox tbPesCPF;
+        private System.Windows.Forms.Label lbTS;
+        private System.Windows.Forms.Label lbNome;
+        private System.Windows.Forms.Label lbCPF;
     }
 }
