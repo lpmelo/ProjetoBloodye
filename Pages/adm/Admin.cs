@@ -14,7 +14,6 @@ namespace ProjetoBloodye.Pages
             principal = frm;
             InitializeComponent();
             CustomizeDesing();
-
         }
         private void CustomizeDesing()
         {

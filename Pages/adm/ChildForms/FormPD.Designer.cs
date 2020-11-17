@@ -36,11 +36,12 @@
             this.lbTS = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
             this.lbCPF = new System.Windows.Forms.Label();
+            this.btnProcurar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbEscolhaPD
             // 
-            this.cbEscolhaPD.BackColor = System.Drawing.Color.Brown;
+            this.cbEscolhaPD.BackColor = System.Drawing.Color.DarkRed;
             this.cbEscolhaPD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEscolhaPD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbEscolhaPD.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,6 +60,7 @@
             // labelCB
             // 
             this.labelCB.AutoSize = true;
+            this.labelCB.BackColor = System.Drawing.Color.DarkRed;
             this.labelCB.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.labelCB.Location = new System.Drawing.Point(14, 16);
@@ -121,12 +123,23 @@
             this.lbCPF.TabIndex = 7;
             this.lbCPF.Text = "Você esta procurando pelo CPF";
             // 
+            // btnProcurar
+            // 
+            this.btnProcurar.Location = new System.Drawing.Point(177, 47);
+            this.btnProcurar.Name = "btnProcurar";
+            this.btnProcurar.Size = new System.Drawing.Size(75, 23);
+            this.btnProcurar.TabIndex = 8;
+            this.btnProcurar.Text = "Procurar";
+            this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
+            // 
             // FormPD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(748, 622);
+            this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.lbCPF);
             this.Controls.Add(this.lbNome);
             this.Controls.Add(this.lbTS);
@@ -152,5 +165,6 @@
         private System.Windows.Forms.Label lbTS;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Label lbCPF;
+        private System.Windows.Forms.Button btnProcurar;
     }
 }
