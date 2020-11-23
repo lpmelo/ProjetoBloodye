@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGSD_A));
             this.tbNome = new System.Windows.Forms.TextBox();
             this.tbEndereco = new System.Windows.Forms.TextBox();
             this.cbValidado = new System.Windows.Forms.CheckBox();
@@ -213,6 +214,7 @@
             // 
             // mtbRG
             // 
+            this.mtbRG.AllowPromptAsInput = false;
             this.mtbRG.BackColor = System.Drawing.Color.DarkRed;
             this.mtbRG.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             this.mtbRG.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -271,6 +273,7 @@
             this.Controls.Add(this.cbValidado);
             this.Controls.Add(this.tbEndereco);
             this.Controls.Add(this.tbNome);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(550, 350);
             this.MinimizeBox = false;
