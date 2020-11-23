@@ -22,6 +22,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
         public FormGSD()
         {
             InitializeComponent();
+            DisplayData();
         }
 
         private void FormGSD_Load(object sender, EventArgs e)
@@ -84,10 +85,14 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            FormGSD_A form = new FormGSD_A();
-            form.Show();
+            FormGSD_A filho = new FormGSD_A();
+            while (filho.cadastrado == false)
+            {
+                filho.ShowDialog();
+                if (filho.cadastrado == true) { DisplayData();}
+                break;
+            }
         }
-
 
     }
 }

@@ -90,7 +90,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                 searchstring = tbPesCPF.Text;
             }
 
-            if (tbPesTS.Visible == true||tbPesNome.Visible == true || tbPesCPF.Visible ==true)
+            if (tbPesTS.Visible == true || tbPesNome.Visible == true || tbPesCPF.Visible == true)
             {
                 Comandos co = new Comandos();
                 try
@@ -100,9 +100,9 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                     OleDbConnection conn = new OleDbConnection(Stringcon);
                     conn.Open();
                     co.conectado = true;
-                    co.Procurar(searchstring,index, conn);
+                    co.Procurar(searchstring, index, conn);
                     conn.Close();
-                
+
                 }
                 catch (Exception erro)
                 {

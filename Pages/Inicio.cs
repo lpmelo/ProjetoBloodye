@@ -26,7 +26,7 @@ namespace ProjetoBloodye
                 comandos.conectado = true;
                 comandos.Logar(tbLogin.Text, tbSenha.Text, conn);
                 conn.Close();
-                while (comandos.logado == true) { Admin adm = new Admin(this); adm.ShowDialog();this.Hide();if (adm.Visible == false) this.Show(); break; }
+                while (comandos.logado == true) { Admin adm = new Admin(this); adm.Show();this.Hide();if (adm.Visible == false) this.Show(); break; }
             }
             catch (Exception erro)
             {
