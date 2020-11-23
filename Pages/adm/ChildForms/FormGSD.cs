@@ -94,6 +94,52 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
             }
         }
 
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FormGSD_E filho = new FormGSD_E();
+            filho.idrecebido = idselecionado;
+            if (idselecionado != null)
+            {
+                while (filho.editado == false)
+                {
+                    filho.ShowDialog();
+                    if (filho.editado == true) { DisplayData(); }
+                    break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não foi selecionado nenhum doador!\n Selecione um para ser editado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var pergunta = MessageBox.Show("Tem certeza que deseja excluir este doador?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (pergunta == DialogResult.Yes)
+            {
+                try
+                {
+                    string local = "bd/Administradores.accdb";
+                    string Stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + local + ";Persist Security Info=False;";
+                    OleDbConnection conn = new OleDbConnection(Stringcon);
+                    conn.Open();
+                    cm.conectado = true;
+                    cm.Excluir(conn, idselecionado);
+                    DisplayData();
+                    conn.Close();
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Exclusão cancelada!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
 

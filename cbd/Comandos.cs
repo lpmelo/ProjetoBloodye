@@ -13,23 +13,25 @@ namespace ProjetoBloodye.cbd
         public bool conectado;
         public bool logado = false;
         public bool cadastrorealizado = false;
+        public bool edicaorealizada = false;
         #region Logar
-        public void Logar(string TLogin,string TSenha, OleDbConnection conexao)
+        public void Logar(string TLogin, string TSenha, OleDbConnection conexao)
         {
-            if (conectado==true) {
+            if (conectado == true)
+            {
                 string Query = "SELECT * FROM Adms WHERE Login='" + TLogin + "' AND Senha='" + TSenha + "';";
                 OleDbCommand cm = new OleDbCommand(Query, conexao);
                 var result = cm.ExecuteScalar();
-                if (result!= null)
+                if (result != null)
                 {
-                    MessageBox.Show("Logado com sucesso!","Login",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Logado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     logado = true;
                 }
                 else
                 {
                     MessageBox.Show("Login ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
             }
             else
             {
@@ -37,13 +39,13 @@ namespace ProjetoBloodye.cbd
             }
 
         }
-#endregion
+        #endregion
         #region Procurar
-        public void Procurar(string TProcura,string index, OleDbConnection conexao)
+        public void Procurar(string TProcura, string index, OleDbConnection conexao)
         {
             if (conectado == true)
             {
-                string Query = "SELECT * FROM Doadores WHERE "+index+"='" + TProcura + "';";
+                string Query = "SELECT * FROM Doadores WHERE " + index + "='" + TProcura + "';";
                 OleDbCommand cm = new OleDbCommand(Query, conexao);
                 var result = cm.ExecuteScalar();
                 if (result != null)
@@ -67,15 +69,39 @@ namespace ProjetoBloodye.cbd
         {
             if (conectado == true)
             {
-                string Query = "UPDATE Doadores SET Validado=@value WHERE Codigo=" + idlnSelecionada + ";";
-                OleDbCommand cm = new OleDbCommand(Query, conexao);
-                cm.Parameters.AddWithValue("@value", true);
-                var result=cm.ExecuteNonQuery();
-                if (result == 1)
+                string Query1 = "SELECT * FROM Doadores WHERE Codigo=" + idlnSelecionada + " AND Validado=@value;";
+                OleDbCommand cm1 = new OleDbCommand(Query1, conexao);
+                cm1.Parameters.AddWithValue("@value", true);
+                var possui = cm1.ExecuteScalar();
+                if (possui != null)
                 {
-                    MessageBox.Show("Doador validado", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var pergunta = MessageBox.Show("O doador já está validado!\nDeseja remover seu validamento?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    if (pergunta == DialogResult.Yes)
+                    {
+                        string Query3 = "UPDATE Doadores SET Validado=@value WHERE Codigo=" + idlnSelecionada + ";";
+                        OleDbCommand cm3 = new OleDbCommand(Query3, conexao);
+                        cm3.Parameters.AddWithValue("@value", false);
+                        var cancelado = cm3.ExecuteNonQuery();
+                        if (cancelado == 1)
+                        {
+                            MessageBox.Show("Validamento cancelado com sucesso!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
                 }
-                else { MessageBox.Show("Erro na validação", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    string Query2 = "UPDATE Doadores SET Validado=@value WHERE Codigo=" + idlnSelecionada + ";";
+                    OleDbCommand cm2 = new OleDbCommand(Query2, conexao);
+                    cm2.Parameters.AddWithValue("@value", true);
+                    var validado = cm2.ExecuteNonQuery();
+                    if (validado == 1)
+                    {
+                        MessageBox.Show("Doador validado com sucesso!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro na validação", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
@@ -97,10 +123,11 @@ namespace ProjetoBloodye.cbd
                 var possui = cm1.ExecuteScalar();
                 if (possui != null)
                 {
-                    MessageBox.Show("Já existe alguém cadastrado este RG ou CPF", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Já existe alguém cadastrado este RG ou CPF", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else { 
-                 string Query2 = "INSERT INTO Doadores(Nome,RG,CPF,TipoSangue,Endereco,Telefone,Celular,Validado) VALUES(@nome,@rg,@cpf,@ts,@endereco,@telefone,@celular,@validado) ";
+                else
+                {
+                    string Query2 = "INSERT INTO Doadores(Nome,RG,CPF,TipoSangue,Endereco,Telefone,Celular,Validado) VALUES(@nome,@rg,@cpf,@ts,@endereco,@telefone,@celular,@validado) ";
                     OleDbCommand cm2 = new OleDbCommand(Query2, conexao);
                     cm2.Parameters.AddWithValue("@nome", TNome);
                     cm2.Parameters.AddWithValue("@rg", TRG);
@@ -114,21 +141,72 @@ namespace ProjetoBloodye.cbd
                     var result = cm2.ExecuteNonQuery();
                     if (result == 1)
                     {
-                     MessageBox.Show("Doador cadastrado", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Doador cadastrado", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cadastrorealizado = true;
                     }
                     else
                     {
-                     MessageBox.Show("Erro no cadastro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    } 
+                        MessageBox.Show("Erro no cadastro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
-                {
-                    MessageBox.Show("Erro na conexão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            {
+                MessageBox.Show("Erro na conexão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
+        #endregion
+        #region Editar
+        public void Editar(OleDbConnection conexao, string idlnSelecionada, string TNome, string TRG, string TCPF, string TTS, string TEndereco, string TTelefone, string TCelular, bool TValidado)
+        {
+            if (conectado == true)
+            {
+                string Query = "UPDATE Doadores SET Nome=@nome,RG=@rg,CPF=@cpf,TipoSangue=@ts,Endereco=@endereco,Telefone=@telefone,Celular=@celular,Validado=@validado WHERE Codigo=" + idlnSelecionada + ";";
+                OleDbCommand cm = new OleDbCommand(Query, conexao);
+                cm.Parameters.AddWithValue("@nome", TNome);
+                cm.Parameters.AddWithValue("@rg", TRG);
+                cm.Parameters.AddWithValue("@cpf", TCPF);
+                cm.Parameters.AddWithValue("@ts", TTS);
+                cm.Parameters.AddWithValue("@endereco", TEndereco);
+                cm.Parameters.AddWithValue("@telefone", TTelefone);
+                cm.Parameters.AddWithValue("@celular", TCelular);
+                cm.Parameters.AddWithValue("@validado", TValidado);
+                var result = cm.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    MessageBox.Show("Dados atualizados com sucesso!", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    edicaorealizada = true;
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível atualizar os dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Erro na conexão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+        #region Excluir
+        public void Excluir(OleDbConnection conexao, string idSelecionado)
+        {
+            string Query = "DELETE * FROM Doadores WHERE Codigo=@id;";
+            OleDbCommand cm = new OleDbCommand(Query, conexao);
+            cm.Parameters.AddWithValue("@id", idSelecionado);
+            var excluido = cm.ExecuteNonQuery();
+            if (excluido == 1)
+            {
+                MessageBox.Show("O registro do doador foi deletado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível deletar o registro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         #endregion
     }
 }

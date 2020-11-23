@@ -14,3 +14,4 @@ D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.Chi
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\bin\Debug\bd\Administradores.accdb
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.FormPD.resources
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.FormGSD_A.resources
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.FormGSD_E.resources
