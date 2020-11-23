@@ -16,7 +16,7 @@ O projeto Bloodye foi criado por mim, Lucas Pereira, com o objetivo de ser um ap
 ## Funcionalidades
 *   [x] Sistema de Login.
 *   [ ] Gerenciar Hemocentros.
-*   [ ] Gerenciar Doadores.
+*   [x] Gerenciar Doadores.
 *   [ ] Ajuda para o usuário.
 *   [x] Sobre o projeto.
 ## Licença
