@@ -30,13 +30,13 @@
         {
             this.cbEscolhaPD = new System.Windows.Forms.ComboBox();
             this.labelCB = new System.Windows.Forms.Label();
-            this.tbPesTS = new System.Windows.Forms.TextBox();
-            this.tbPesNome = new System.Windows.Forms.TextBox();
-            this.tbPesCPF = new System.Windows.Forms.TextBox();
             this.lbTS = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
             this.lbCPF = new System.Windows.Forms.Label();
             this.btnProcurar = new System.Windows.Forms.Button();
+            this.cbTS = new System.Windows.Forms.ComboBox();
+            this.tbPesCPF = new System.Windows.Forms.TextBox();
+            this.tbPesNome = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cbEscolhaPD
@@ -68,27 +68,6 @@
             this.labelCB.Size = new System.Drawing.Size(128, 13);
             this.labelCB.TabIndex = 1;
             this.labelCB.Text = "Escolha uma pesquisa";
-            // 
-            // tbPesTS
-            // 
-            this.tbPesTS.Location = new System.Drawing.Point(12, 50);
-            this.tbPesTS.Name = "tbPesTS";
-            this.tbPesTS.Size = new System.Drawing.Size(151, 20);
-            this.tbPesTS.TabIndex = 2;
-            // 
-            // tbPesNome
-            // 
-            this.tbPesNome.Location = new System.Drawing.Point(12, 50);
-            this.tbPesNome.Name = "tbPesNome";
-            this.tbPesNome.Size = new System.Drawing.Size(151, 20);
-            this.tbPesNome.TabIndex = 3;
-            // 
-            // tbPesCPF
-            // 
-            this.tbPesCPF.Location = new System.Drawing.Point(12, 50);
-            this.tbPesCPF.Name = "tbPesCPF";
-            this.tbPesCPF.Size = new System.Drawing.Size(151, 20);
-            this.tbPesCPF.TabIndex = 4;
             // 
             // lbTS
             // 
@@ -141,19 +120,63 @@
             this.btnProcurar.UseVisualStyleBackColor = false;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
+            // cbTS
+            // 
+            this.cbTS.BackColor = System.Drawing.Color.DarkRed;
+            this.cbTS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbTS.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cbTS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cbTS.FormattingEnabled = true;
+            this.cbTS.Items.AddRange(new object[] {
+            "A+",
+            "A-",
+            "B+",
+            "B-",
+            "AB+",
+            "AB-",
+            "O+",
+            "O-"});
+            this.cbTS.Location = new System.Drawing.Point(12, 45);
+            this.cbTS.Name = "cbTS";
+            this.cbTS.Size = new System.Drawing.Size(50, 24);
+            this.cbTS.TabIndex = 14;
+            // 
+            // tbPesCPF
+            // 
+            this.tbPesCPF.BackColor = System.Drawing.Color.DarkRed;
+            this.tbPesCPF.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.tbPesCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tbPesCPF.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tbPesCPF.Location = new System.Drawing.Point(12, 46);
+            this.tbPesCPF.Name = "tbPesCPF";
+            this.tbPesCPF.Size = new System.Drawing.Size(151, 22);
+            this.tbPesCPF.TabIndex = 15;
+            // 
+            // tbPesNome
+            // 
+            this.tbPesNome.BackColor = System.Drawing.Color.DarkRed;
+            this.tbPesNome.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.tbPesNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tbPesNome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tbPesNome.Location = new System.Drawing.Point(12, 46);
+            this.tbPesNome.Name = "tbPesNome";
+            this.tbPesNome.Size = new System.Drawing.Size(151, 22);
+            this.tbPesNome.TabIndex = 16;
+            // 
             // FormPD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(748, 622);
+            this.Controls.Add(this.tbPesNome);
+            this.Controls.Add(this.tbPesCPF);
+            this.Controls.Add(this.cbTS);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.lbCPF);
             this.Controls.Add(this.lbNome);
             this.Controls.Add(this.lbTS);
-            this.Controls.Add(this.tbPesCPF);
-            this.Controls.Add(this.tbPesNome);
-            this.Controls.Add(this.tbPesTS);
             this.Controls.Add(this.labelCB);
             this.Controls.Add(this.cbEscolhaPD);
             this.Name = "FormPD";
@@ -167,12 +190,12 @@
 
         private System.Windows.Forms.ComboBox cbEscolhaPD;
         private System.Windows.Forms.Label labelCB;
-        private System.Windows.Forms.TextBox tbPesTS;
-        private System.Windows.Forms.TextBox tbPesNome;
-        private System.Windows.Forms.TextBox tbPesCPF;
         private System.Windows.Forms.Label lbTS;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Label lbCPF;
         private System.Windows.Forms.Button btnProcurar;
+        private System.Windows.Forms.ComboBox cbTS;
+        private System.Windows.Forms.TextBox tbPesCPF;
+        private System.Windows.Forms.TextBox tbPesNome;
     }
 }

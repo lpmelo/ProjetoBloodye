@@ -14,10 +14,11 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
 {
     public partial class FormPD : Form
     {
+        Comandos co = new Comandos();
         public FormPD()
         {
             InitializeComponent();
-            tbPesTS.Visible = false;
+            cbTS.Visible = false;
             tbPesNome.Visible = false;
             tbPesCPF.Visible = false;
             lbTS.Visible = false; 
@@ -31,14 +32,14 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
             labelCB.Visible = false;
             if (cbEscolhaPD.SelectedIndex == 0)
             {
-                tbPesTS.Visible = true;
+                cbTS.Visible = true;
                 lbTS.Visible = true;
                 btnProcurar.Visible = true;
             }
             else
             {
-                tbPesTS.Text = "";
-                tbPesTS.Visible = false;
+                cbTS.Text = "";
+                cbTS.Visible = false;
                 lbTS.Visible = false;
             }
             if (cbEscolhaPD.SelectedIndex == 1)
@@ -77,7 +78,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
             if (indexstring.Equals("0"))
             {
                 index = "TIPOSANGUE";
-                searchstring = tbPesTS.Text;
+                searchstring = cbTS.Text;
             }
             if (indexstring.Equals("1"))
             {
@@ -90,9 +91,8 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                 searchstring = tbPesCPF.Text;
             }
 
-            if (tbPesTS.Visible == true || tbPesNome.Visible == true || tbPesCPF.Visible == true)
+            if (cbTS.Visible == true || tbPesNome.Visible == true || tbPesCPF.Visible == true)
             {
-                Comandos co = new Comandos();
                 try
                 {
                     string local = "bd/Administradores.accdb";
