@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
@@ -41,22 +42,17 @@ namespace ProjetoBloodye.cbd
         }
         #endregion
         #region Procurar
-        public void Procurar(string TProcura, string index, OleDbConnection conexao)
+        public void Procurar(string TProcura, string index, OleDbConnection conexao,DataGridView tabela)
         {
             if (conectado == true)
             {
-                string Query = "SELECT * FROM Doadores WHERE " + index + "='" + TProcura + "';";
+                string Query = "SELECT * FROM Doadores WHERE " + index + " LIKE '%" + TProcura + "%';";
                 OleDbCommand cm = new OleDbCommand(Query, conexao);
-                var result = cm.ExecuteScalar();
-                if (result != null)
-                {
-                    MessageBox.Show("Encontrou", "Teste", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Não encontrou", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+                cm.CommandType = CommandType.Text;
+                OleDbDataAdapter da = new OleDbDataAdapter(cm);
+                DataTable Doadores = new DataTable();
+                da.Fill(Doadores);
+                tabela.DataSource = Doadores;
             }
             else
             {

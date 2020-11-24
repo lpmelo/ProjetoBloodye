@@ -25,6 +25,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
             lbNome.Visible = false;
             lbCPF.Visible = false;
             btnProcurar.Visible = false;
+            dataGridView1.Visible = false;
         }
 
         private void cbEscolhaPD_SelectedIndexChanged(object sender, EventArgs e)
@@ -93,6 +94,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
 
             if (cbTS.Visible == true || tbPesNome.Visible == true || tbPesCPF.Visible == true)
             {
+                dataGridView1.Visible = true;
                 try
                 {
                     string local = "bd/Administradores.accdb";
@@ -100,7 +102,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                     OleDbConnection conn = new OleDbConnection(Stringcon);
                     conn.Open();
                     co.conectado = true;
-                    co.Procurar(searchstring, index, conn);
+                    co.Procurar(searchstring, index, conn,dataGridView1);
                     conn.Close();
 
                 }
@@ -113,5 +115,6 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
 
             }
         }
+       
     }
 }
