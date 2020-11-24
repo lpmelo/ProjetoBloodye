@@ -73,6 +73,12 @@
     <Compile Include="Pages\adm\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\adm\ChildForms\FormCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\adm\ChildForms\FormCD.Designer.cs">
+      <DependentUpon>FormCD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\adm\ChildForms\FormGSD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Pages\adm\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\adm\ChildForms\FormCD.resx">
+      <DependentUpon>FormCD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\adm\ChildForms\FormGSD.resx">
       <DependentUpon>FormGSD.cs</DependentUpon>

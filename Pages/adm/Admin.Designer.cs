@@ -43,7 +43,6 @@
             this.btnSHGerenciar = new System.Windows.Forms.Button();
             this.btnHemocentros = new System.Windows.Forms.Button();
             this.subMenuP1 = new System.Windows.Forms.Panel();
-            this.btnSDAgendamento = new System.Windows.Forms.Button();
             this.btnSDContato = new System.Windows.Forms.Button();
             this.btnSDProcurar = new System.Windows.Forms.Button();
             this.btnSDGerenciar = new System.Windows.Forms.Button();
@@ -84,7 +83,7 @@
             this.PanelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.PanelSideMenu.Margin = new System.Windows.Forms.Padding(4);
             this.PanelSideMenu.Name = "PanelSideMenu";
-            this.PanelSideMenu.Size = new System.Drawing.Size(170, 661);
+            this.PanelSideMenu.Size = new System.Drawing.Size(170, 684);
             this.PanelSideMenu.TabIndex = 0;
             // 
             // panelLogout
@@ -92,7 +91,7 @@
             this.panelLogout.BackColor = System.Drawing.Color.DarkRed;
             this.panelLogout.Controls.Add(this.btnLogout);
             this.panelLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelLogout.Location = new System.Drawing.Point(0, 609);
+            this.panelLogout.Location = new System.Drawing.Point(0, 632);
             this.panelLogout.Name = "panelLogout";
             this.panelLogout.Size = new System.Drawing.Size(170, 52);
             this.panelLogout.TabIndex = 8;
@@ -122,7 +121,7 @@
             this.btnSobre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSobre.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSobre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSobre.Location = new System.Drawing.Point(0, 510);
+            this.btnSobre.Location = new System.Drawing.Point(0, 480);
             this.btnSobre.Name = "btnSobre";
             this.btnSobre.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSobre.Size = new System.Drawing.Size(170, 40);
@@ -138,7 +137,7 @@
             this.subMenuP3.Controls.Add(this.btnSAContato);
             this.subMenuP3.Controls.Add(this.btnSAManual);
             this.subMenuP3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuP3.Location = new System.Drawing.Point(0, 443);
+            this.subMenuP3.Location = new System.Drawing.Point(0, 413);
             this.subMenuP3.Name = "subMenuP3";
             this.subMenuP3.Size = new System.Drawing.Size(170, 67);
             this.subMenuP3.TabIndex = 6;
@@ -190,7 +189,7 @@
             this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjuda.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAjuda.Location = new System.Drawing.Point(0, 403);
+            this.btnAjuda.Location = new System.Drawing.Point(0, 373);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAjuda.Size = new System.Drawing.Size(170, 40);
@@ -207,7 +206,7 @@
             this.subMenuP2.Controls.Add(this.btnSHProcurar);
             this.subMenuP2.Controls.Add(this.btnSHGerenciar);
             this.subMenuP2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuP2.Location = new System.Drawing.Point(0, 307);
+            this.subMenuP2.Location = new System.Drawing.Point(0, 277);
             this.subMenuP2.Name = "subMenuP2";
             this.subMenuP2.Size = new System.Drawing.Size(170, 96);
             this.subMenuP2.TabIndex = 4;
@@ -278,7 +277,7 @@
             this.btnHemocentros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHemocentros.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHemocentros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnHemocentros.Location = new System.Drawing.Point(0, 267);
+            this.btnHemocentros.Location = new System.Drawing.Point(0, 237);
             this.btnHemocentros.Name = "btnHemocentros";
             this.btnHemocentros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnHemocentros.Size = new System.Drawing.Size(170, 40);
@@ -291,34 +290,14 @@
             // subMenuP1
             // 
             this.subMenuP1.BackColor = System.Drawing.Color.IndianRed;
-            this.subMenuP1.Controls.Add(this.btnSDAgendamento);
             this.subMenuP1.Controls.Add(this.btnSDContato);
             this.subMenuP1.Controls.Add(this.btnSDProcurar);
             this.subMenuP1.Controls.Add(this.btnSDGerenciar);
             this.subMenuP1.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuP1.Location = new System.Drawing.Point(0, 140);
             this.subMenuP1.Name = "subMenuP1";
-            this.subMenuP1.Size = new System.Drawing.Size(170, 127);
+            this.subMenuP1.Size = new System.Drawing.Size(170, 97);
             this.subMenuP1.TabIndex = 2;
-            // 
-            // btnSDAgendamento
-            // 
-            this.btnSDAgendamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSDAgendamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSDAgendamento.FlatAppearance.BorderSize = 0;
-            this.btnSDAgendamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnSDAgendamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSDAgendamento.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSDAgendamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSDAgendamento.Location = new System.Drawing.Point(0, 90);
-            this.btnSDAgendamento.Name = "btnSDAgendamento";
-            this.btnSDAgendamento.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnSDAgendamento.Size = new System.Drawing.Size(170, 30);
-            this.btnSDAgendamento.TabIndex = 3;
-            this.btnSDAgendamento.Text = "Agendamento";
-            this.btnSDAgendamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSDAgendamento.UseVisualStyleBackColor = true;
-            this.btnSDAgendamento.Click += new System.EventHandler(this.btnSDAgendamento_Click);
             // 
             // btnSDContato
             // 
@@ -432,14 +411,14 @@
             this.panelChildForm.Controls.Add(this.label1);
             this.panelChildForm.Location = new System.Drawing.Point(170, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(764, 661);
+            this.panelChildForm.Size = new System.Drawing.Size(764, 684);
             this.panelChildForm.TabIndex = 1;
             // 
             // linkLabel2
             // 
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(249, 635);
+            this.linkLabel2.Location = new System.Drawing.Point(249, 658);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(57, 17);
             this.linkLabel2.TabIndex = 6;
@@ -451,7 +430,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(204, 635);
+            this.label3.Location = new System.Drawing.Point(204, 658);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 5;
@@ -461,7 +440,7 @@
             // 
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(154, 635);
+            this.linkLabel1.Location = new System.Drawing.Point(154, 658);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(55, 17);
             this.linkLabel1.TabIndex = 4;
@@ -473,7 +452,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 635);
+            this.label2.Location = new System.Drawing.Point(3, 658);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 17);
             this.label2.TabIndex = 3;
@@ -483,7 +462,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(281, 168);
+            this.pictureBox1.Location = new System.Drawing.Point(281, 180);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 190);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -495,7 +474,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(245, 344);
+            this.label1.Location = new System.Drawing.Point(245, 356);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(266, 73);
             this.label1.TabIndex = 2;
@@ -505,7 +484,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 661);
+            this.ClientSize = new System.Drawing.Size(934, 684);
             this.ControlBox = false;
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.PanelSideMenu);
@@ -538,7 +517,6 @@
         private System.Windows.Forms.PictureBox PBLogo;
         private System.Windows.Forms.Button btnDoadores;
         private System.Windows.Forms.Panel subMenuP1;
-        private System.Windows.Forms.Button btnSDAgendamento;
         private System.Windows.Forms.Button btnSDContato;
         private System.Windows.Forms.Button btnSDProcurar;
         private System.Windows.Forms.Button btnSDGerenciar;

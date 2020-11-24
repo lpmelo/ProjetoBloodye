@@ -59,12 +59,9 @@ namespace ProjetoBloodye.Pages
         private void btnSDContato_Click(object sender, EventArgs e)
         {
             HideSubMenu(subMenuP1);
+            openChildForm(new FormCD());
         }
 
-        private void btnSDAgendamento_Click(object sender, EventArgs e)
-        {
-            HideSubMenu(subMenuP1);
-        }
 
         private void btnSHGerenciar_Click(object sender, EventArgs e)
         {
@@ -144,6 +141,9 @@ namespace ProjetoBloodye.Pages
             if (activeForm != null)
             {
                 activeForm.Close();
+                HideSubMenu(subMenuP1);
+                HideSubMenu(subMenuP2);
+                HideSubMenu(subMenuP3);
             }
             activeForm = null;
         }
