@@ -20,22 +20,6 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
         public FormGSD_E()
         {
             InitializeComponent();
-            label1.Visible = false;
-            label2.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
-            label5.Visible = false;
-            label6.Visible = false;
-            label7.Visible = false;
-            tbNome.Visible = false;
-            mtbRG.Visible = false;
-            mtbCPF.Visible = false;
-            cbTS.Visible = false;
-            tbEndereco.Visible = false;
-            mtbTelefone.Visible = false;
-            mtbCelular.Visible = false;
-            cbValidado.Visible = false;
-            btnEditar.Visible = false;
         }
 
 
@@ -74,8 +58,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                 tbEndereco.Text = registro["Endereco"].ToString();
                 mtbTelefone.Text = registro["Telefone"].ToString();
                 mtbCelular.Text = registro["Celular"].ToString();
-                bool validado = false;
-                validado = (bool)registro["Validado"];
+                bool validado = (bool)registro["Validado"];
                 cbValidado.Checked = validado;
             }
             else
@@ -106,26 +89,8 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
             }
         }
 
-        private void btnCarregar_Click(object sender, EventArgs e)
+        private void FormGSD_E_Load(object sender, EventArgs e)
         {
-            label8.Visible = false;
-            btnCarregar.Visible = false;
-            label1.Visible = true;
-            label2.Visible = true;
-            label3.Visible = true;
-            label4.Visible = true;
-            label5.Visible = true;
-            label6.Visible = true;
-            label7.Visible = true;
-            tbNome.Visible = true;
-            mtbRG.Visible = true;
-            mtbCPF.Visible = true;
-            cbTS.Visible = true;
-            tbEndereco.Visible = true;
-            mtbTelefone.Visible = true;
-            mtbCelular.Visible = true;
-            cbValidado.Visible = true;
-            btnEditar.Visible = true;
             IniciarEdicao();
         }
     }

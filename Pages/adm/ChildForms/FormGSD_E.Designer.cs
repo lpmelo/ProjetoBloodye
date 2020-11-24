@@ -45,8 +45,6 @@
             this.cbValidado = new System.Windows.Forms.CheckBox();
             this.tbEndereco = new System.Windows.Forms.TextBox();
             this.tbNome = new System.Windows.Forms.TextBox();
-            this.btnCarregar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // mtbCelular
@@ -252,46 +250,12 @@
             this.tbNome.Size = new System.Drawing.Size(195, 22);
             this.tbNome.TabIndex = 22;
             // 
-            // btnCarregar
-            // 
-            this.btnCarregar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCarregar.BackColor = System.Drawing.Color.DarkRed;
-            this.btnCarregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCarregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCarregar.FlatAppearance.BorderSize = 0;
-            this.btnCarregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCarregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarregar.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCarregar.Location = new System.Drawing.Point(187, 116);
-            this.btnCarregar.Name = "btnCarregar";
-            this.btnCarregar.Size = new System.Drawing.Size(161, 59);
-            this.btnCarregar.TabIndex = 38;
-            this.btnCarregar.Text = "Carregar dados";
-            this.btnCarregar.UseVisualStyleBackColor = false;
-            this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(89, 98);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(372, 16);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Clique no botão abaixo para carregar os dados de cadastro";
-            // 
             // FormGSD_E
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(534, 311);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnCarregar);
             this.Controls.Add(this.mtbCelular);
             this.Controls.Add(this.mtbTelefone);
             this.Controls.Add(this.mtbRG);
@@ -316,6 +280,7 @@
             this.Name = "FormGSD_E";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Doador";
+            this.Load += new System.EventHandler(this.FormGSD_E_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +304,5 @@
         private System.Windows.Forms.CheckBox cbValidado;
         private System.Windows.Forms.TextBox tbEndereco;
         private System.Windows.Forms.TextBox tbNome;
-        private System.Windows.Forms.Button btnCarregar;
-        private System.Windows.Forms.Label label8;
     }
 }
