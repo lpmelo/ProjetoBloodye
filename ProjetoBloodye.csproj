@@ -46,11 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministradoresDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="data\AdministradoresDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,17 +141,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="AdministradoresDataSet.xsc">
-      <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AdministradoresDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AdministradoresDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AdministradoresDataSet.xss">
-      <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
-    </None>
     <None Include="data\AdministradoresDataSet.xsc">
       <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
     </None>
