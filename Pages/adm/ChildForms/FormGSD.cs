@@ -16,7 +16,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
     {
         string idselecionado;
         OleDbDataAdapter adapt;
-        Comandos cm = new Comandos();
+        Comandos co = new Comandos();
 
 
         public FormGSD()
@@ -59,7 +59,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
 
             }catch(Exception erro)
             {
-                cm.conectado = false;
+                co.conectado = false;
                 MessageBox.Show(erro.Message);
             }
         }
@@ -72,15 +72,15 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                 string Stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + local + ";Persist Security Info=False;";
                 OleDbConnection conn = new OleDbConnection(Stringcon);
                 conn.Open();
-                cm.conectado = true;
-                cm.Validar(idselecionado, conn);
+                co.conectado = true;
+                co.Validar(idselecionado, conn);
                 DisplayData();
                 conn.Close();
                
             }
             catch (Exception erro)
             {
-                cm.conectado = false;
+                co.conectado = false;
                 MessageBox.Show(erro.Message);
             }
         }
@@ -127,8 +127,8 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                     string Stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + local + ";Persist Security Info=False;";
                     OleDbConnection conn = new OleDbConnection(Stringcon);
                     conn.Open();
-                    cm.conectado = true;
-                    cm.Excluir(conn, idselecionado);
+                    co.conectado = true;
+                    co.Excluir(conn, idselecionado);
                     DisplayData();
                     conn.Close();
                 }

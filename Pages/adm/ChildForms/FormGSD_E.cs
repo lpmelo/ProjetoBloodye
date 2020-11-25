@@ -89,7 +89,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                         OleDbConnection conn = new OleDbConnection(Stringcon);
                         conn.Open();
                         co.conectado = true;
-                        co.Editar(idrecebido, tbNome.Text, mtbRG.Text, mtbCPF.Text, cbTS.Text, tbEndereco.Text, mtbTelefone.Text, mtbCelular.Text, cbValidado.Checked, cbHemocentro.SelectedIndex, conn);
+                        co.Editar(idrecebido, tbNome.Text, mtbRG.Text, mtbCPF.Text, cbTS.Text, tbEndereco.Text, mtbTelefone.Text, mtbCelular.Text, cbValidado.Checked, Convert.ToInt32(cbHemocentro.Text), conn);
                         conn.Close();
                         editado = co.edicaorealizada;
                         if (editado == true)
@@ -116,16 +116,17 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                 OleDbCommand cm = new OleDbCommand(Query, conn);
                 OleDbDataReader reader = cm.ExecuteReader();
                 DataTable table = new DataTable();
+                table.Clear();
+                cbHemocentro.DataSource = null;
                 table.Load(reader);
                 DataRow row = table.NewRow();
                 row["Codigo"] = 0;
                 table.Rows.InsertAt(row, 0);
-                this.cbHemocentro.DataSource = table;
-                this.cbHemocentro.ValueMember = "Codigo";
-                this.cbHemocentro.DisplayMember = "Codigo";
+                cbHemocentro.DataSource = table;
+                cbHemocentro.ValueMember = "Codigo";
+                cbHemocentro.DisplayMember = "Codigo";
                 reader.Close();
                 conn.Close();
-                conn.Dispose();
             }
             catch (Exception erro)
             {

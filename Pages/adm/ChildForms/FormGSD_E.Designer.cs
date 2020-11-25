@@ -309,7 +309,7 @@
             this.MinimumSize = new System.Drawing.Size(550, 350);
             this.Name = "FormGSD_E";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Editar Doador";
+            this.Text = "Editar dados Doador";
             this.Load += new System.EventHandler(this.FormGSD_E_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -70,7 +70,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                         OleDbConnection conn = new OleDbConnection(Stringcon);
                         conn.Open();
                         co.conectado = true;
-                        co.Adicionar(conn, tbNome.Text, mtbRG.Text, mtbCPF.Text, cbTS.Text, tbEndereco.Text, mtbTelefone.Text, mtbCelular.Text, cbValidado.Checked, cbHemocentro.SelectedIndex);
+                        co.Adicionar(conn, tbNome.Text, mtbRG.Text, mtbCPF.Text, cbTS.Text, tbEndereco.Text, mtbTelefone.Text, mtbCelular.Text, cbValidado.Checked, Convert.ToInt32(cbHemocentro.Text));
                         conn.Close();
                         cadastrado = co.cadastrorealizado;
                         if (cadastrado == true) this.Close();

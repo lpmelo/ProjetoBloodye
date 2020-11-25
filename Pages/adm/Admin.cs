@@ -66,6 +66,7 @@ namespace ProjetoBloodye.Pages
         private void btnSHGerenciar_Click(object sender, EventArgs e)
         {
             HideSubMenu(subMenuP2);
+            openChildForm(new Form_GSH());
         }
 
         private void btnSHProcurar_Click(object sender, EventArgs e)
