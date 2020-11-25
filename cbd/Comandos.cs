@@ -108,7 +108,7 @@ namespace ProjetoBloodye.cbd
         }
         #endregion Validar
         #region Adicionar
-        public void Adicionar(OleDbConnection conexao, string TNome, string TRG, string TCPF, string TTS, string TEndereco, string TTelefone, string TCelular, bool TValidado)
+        public void Adicionar(OleDbConnection conexao, string TNome, string TRG, string TCPF, string TTS, string TEndereco, string TTelefone, string TCelular, bool TValidado,int THemocentro)
         {
             if (conectado == true)
             {
@@ -123,7 +123,7 @@ namespace ProjetoBloodye.cbd
                 }
                 else
                 {
-                    string Query2 = "INSERT INTO Doadores(Nome,RG,CPF,TipoSangue,Endereco,Telefone,Celular,Validado) VALUES(@nome,@rg,@cpf,@ts,@endereco,@telefone,@celular,@validado) ";
+                    string Query2 = "INSERT INTO Doadores(Nome,RG,CPF,TipoSangue,Endereco,Telefone,Celular,Validado,HemocentroCadastrado) VALUES(@nome,@rg,@cpf,@ts,@endereco,@telefone,@celular,@validado,@hemocentro) ";
                     OleDbCommand cm2 = new OleDbCommand(Query2, conexao);
                     cm2.Parameters.AddWithValue("@nome", TNome);
                     cm2.Parameters.AddWithValue("@rg", TRG);
@@ -133,6 +133,7 @@ namespace ProjetoBloodye.cbd
                     cm2.Parameters.AddWithValue("@telefone", TTelefone);
                     cm2.Parameters.AddWithValue("@celular", TCelular);
                     cm2.Parameters.AddWithValue("@validado", TValidado);
+                    cm2.Parameters.AddWithValue("@hemocentro", THemocentro);
 
                     var result = cm2.ExecuteNonQuery();
                     if (result == 1)
@@ -154,11 +155,11 @@ namespace ProjetoBloodye.cbd
         }
         #endregion
         #region Editar
-        public void Editar(OleDbConnection conexao, string idlnSelecionada, string TNome, string TRG, string TCPF, string TTS, string TEndereco, string TTelefone, string TCelular, bool TValidado)
+        public void Editar(string idlnSelecionada, string TNome, string TRG, string TCPF, string TTS, string TEndereco, string TTelefone, string TCelular, bool TValidado, int THemocentro, OleDbConnection conexao)
         {
             if (conectado == true)
             {
-                string Query = "UPDATE Doadores SET Nome=@nome,RG=@rg,CPF=@cpf,TipoSangue=@ts,Endereco=@endereco,Telefone=@telefone,Celular=@celular,Validado=@validado WHERE Codigo=" + idlnSelecionada + ";";
+                string Query = "UPDATE Doadores SET Nome=@nome,RG=@rg,CPF=@cpf,TipoSangue=@ts,Endereco=@endereco,Telefone=@telefone,Celular=@celular,Validado=@validado,HemocentroCadastrado=@hemocentro WHERE Codigo=" + idlnSelecionada + ";";
                 OleDbCommand cm = new OleDbCommand(Query, conexao);
                 cm.Parameters.AddWithValue("@nome", TNome);
                 cm.Parameters.AddWithValue("@rg", TRG);
@@ -168,6 +169,7 @@ namespace ProjetoBloodye.cbd
                 cm.Parameters.AddWithValue("@telefone", TTelefone);
                 cm.Parameters.AddWithValue("@celular", TCelular);
                 cm.Parameters.AddWithValue("@validado", TValidado);
+                cm.Parameters.AddWithValue("@hemocentro", THemocentro);
                 var result = cm.ExecuteNonQuery();
                 if (result == 1)
                 {

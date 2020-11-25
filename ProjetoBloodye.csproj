@@ -46,16 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="data\AdministradoresDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="data\AdministradoresDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdministradoresDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="bd\AdministradoresDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,6 +57,12 @@
     </Compile>
     <Compile Include="Pages\adm\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\adm\ChildForms\Form GSH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\adm\ChildForms\Form GSH.Designer.cs">
+      <DependentUpon>Form GSH.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\adm\ChildForms\FormCD.cs">
       <SubType>Form</SubType>
@@ -115,6 +111,9 @@
     <EmbeddedResource Include="Pages\adm\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\adm\ChildForms\Form GSH.resx">
+      <DependentUpon>Form GSH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\adm\ChildForms\FormCD.resx">
       <DependentUpon>FormCD.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,28 +140,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="data\AdministradoresDataSet.xsc">
-      <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="data\AdministradoresDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AdministradoresDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="data\AdministradoresDataSet.xss">
-      <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="data\AdministradoresDataSet1.xsc">
-      <DependentUpon>AdministradoresDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="data\AdministradoresDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AdministradoresDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="data\AdministradoresDataSet1.xss">
-      <DependentUpon>AdministradoresDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="bd\AdministradoresDataSet.xsc">
       <DependentUpon>AdministradoresDataSet.xsd</DependentUpon>
     </None>
@@ -194,7 +171,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="bd\Administradores.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

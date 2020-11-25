@@ -27,8 +27,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
 
         private void FormGSD_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'administradoresDataSet1.Doadores'. Você pode movê-la ou removê-la conforme necessário.
-            this.doadoresTableAdapter.Fill(this.administradoresDataSet1.Doadores);
+            DisplayData();
 
         }
 
@@ -47,10 +46,13 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
             {
                 string local = "bd/Administradores.accdb";
                 string Stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + local + ";Persist Security Info=False;";
+                string Query1 = "SELECT Doadores.Codigo,Doadores.Nome,Doadores.RG,Doadores.CPF,Doadores.TipoSangue," +
+                                "Doadores.Endereco,Doadores.Validado,Hemocentros.Nome AS NomeHemocentro FROM Doadores " +
+                                "LEFT JOIN Hemocentros ON Doadores.HemocentroCadastrado = Hemocentros.Codigo";
                 OleDbConnection conn = new OleDbConnection(Stringcon);
                 conn.Open();
                 DataTable dt = new DataTable();
-                adapt = new OleDbDataAdapter("SELECT * FROM Doadores", conn);
+                adapt = new OleDbDataAdapter(Query1, conn);
                 adapt.Fill(dt);
                 dataGridView1.DataSource = dt;
                 conn.Close();

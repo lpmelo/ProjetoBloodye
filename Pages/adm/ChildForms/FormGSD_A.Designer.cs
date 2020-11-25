@@ -45,6 +45,8 @@
             this.mtbRG = new System.Windows.Forms.MaskedTextBox();
             this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.mtbCelular = new System.Windows.Forms.MaskedTextBox();
+            this.cbHemocentro = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbNome
@@ -73,7 +75,7 @@
             this.cbValidado.AutoSize = true;
             this.cbValidado.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cbValidado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.cbValidado.Location = new System.Drawing.Point(319, 158);
+            this.cbValidado.Location = new System.Drawing.Point(240, 219);
             this.cbValidado.Name = "cbValidado";
             this.cbValidado.Size = new System.Drawing.Size(82, 20);
             this.cbValidado.TabIndex = 8;
@@ -250,6 +252,32 @@
             this.mtbCelular.TabIndex = 21;
             this.mtbCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
+            // cbHemocentro
+            // 
+            this.cbHemocentro.BackColor = System.Drawing.Color.DarkRed;
+            this.cbHemocentro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHemocentro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbHemocentro.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cbHemocentro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cbHemocentro.FormattingEnabled = true;
+            this.cbHemocentro.Items.AddRange(new object[] {
+            ""});
+            this.cbHemocentro.Location = new System.Drawing.Point(319, 158);
+            this.cbHemocentro.Name = "cbHemocentro";
+            this.cbHemocentro.Size = new System.Drawing.Size(50, 24);
+            this.cbHemocentro.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(316, 142);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(141, 16);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Código Hemocentro *";
+            // 
             // FormGSD_A
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +285,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(534, 311);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cbHemocentro);
             this.Controls.Add(this.mtbCelular);
             this.Controls.Add(this.mtbTelefone);
             this.Controls.Add(this.mtbRG);
@@ -281,6 +311,7 @@
             this.Name = "FormGSD_A";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Doador";
+            this.Load += new System.EventHandler(this.FormGSD_A_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +334,7 @@
         private System.Windows.Forms.MaskedTextBox mtbRG;
         private System.Windows.Forms.MaskedTextBox mtbTelefone;
         private System.Windows.Forms.MaskedTextBox mtbCelular;
+        private System.Windows.Forms.ComboBox cbHemocentro;
+        private System.Windows.Forms.Label label8;
     }
 }
