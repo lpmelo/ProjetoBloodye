@@ -99,6 +99,7 @@ namespace ProjetoBloodye.Pages
         private void btnSAContato_Click(object sender, EventArgs e)
         {
             ShowSubMenu(subMenuP3);
+            openChildForm(new Contato());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -136,7 +137,7 @@ namespace ProjetoBloodye.Pages
 
         private void btnSobre_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormSobre());
+            openChildForm(new Sobre());
         }
 
         private void PBLogo_Click(object sender, EventArgs e)

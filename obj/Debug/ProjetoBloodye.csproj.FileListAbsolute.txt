@@ -8,7 +8,6 @@ D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.csproj.Genera
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.csproj.CoreCompileInputs.cache
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.exe
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.pdb
-D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.FormSobre.resources
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.csprojAssemblyReference.cache
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.FormGSD.resources
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\bin\Debug\bd\Administradores.accdb
@@ -21,3 +20,5 @@ D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.Chi
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.FormGSH_E.resources
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.FormPH.resources
 D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.FormCH.resources
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.Contato.resources
+D:\Projetos\ProjetoBloodye\ProjetoBloodye\obj\Debug\ProjetoBloodye.Pages.adm.ChildForms.Sobre.resources

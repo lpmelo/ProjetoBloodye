@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoBloodye.Pages.adm.ChildForms
 {
-    public partial class FormSobre : Form
+    public partial class Sobre : Form
     {
-        public FormSobre()
+        public Sobre()
         {
             InitializeComponent();
         }

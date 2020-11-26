@@ -76,6 +76,12 @@
     <Compile Include="Pages\adm\ChildForms\FormCH.Designer.cs">
       <DependentUpon>FormCH.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\adm\ChildForms\Contato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\adm\ChildForms\Contato.Designer.cs">
+      <DependentUpon>Contato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\adm\ChildForms\FormGSD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,11 +124,11 @@
     <Compile Include="Pages\adm\ChildForms\FormPH.Designer.cs">
       <DependentUpon>FormPH.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\adm\ChildForms\FormSobre.cs">
+    <Compile Include="Pages\adm\ChildForms\Sobre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\adm\ChildForms\FormSobre.Designer.cs">
-      <DependentUpon>FormSobre.cs</DependentUpon>
+    <Compile Include="Pages\adm\ChildForms\Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\Inicio.cs">
       <SubType>Form</SubType>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\adm\ChildForms\FormCH.resx">
       <DependentUpon>FormCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\adm\ChildForms\Contato.resx">
+      <DependentUpon>Contato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\adm\ChildForms\FormGSD.resx">
       <DependentUpon>FormGSD.cs</DependentUpon>
@@ -165,8 +174,8 @@
     <EmbeddedResource Include="Pages\adm\ChildForms\FormPH.resx">
       <DependentUpon>FormPH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\adm\ChildForms\FormSobre.resx">
-      <DependentUpon>FormSobre.cs</DependentUpon>
+    <EmbeddedResource Include="Pages\adm\ChildForms\Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -211,6 +220,9 @@
     <Folder Include="data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Images\Phone.png" />
+    <None Include="Assets\Images\whatsapp.png" />
+    <None Include="Assets\Images\envelope.png" />
     <Content Include="bd\Administradores.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
