@@ -94,6 +94,7 @@ namespace ProjetoBloodye.Pages
         private void btnSAManual_Click(object sender, EventArgs e)
         {
             ShowSubMenu(subMenuP3);
+            MessageBox.Show("Aqui será adicionado um tipo de tutorial para o usuário, com um passo a passo, ensinando como utilizar o software.\nPorém por falta de tempo, não será adionado no momento.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnSAContato_Click(object sender, EventArgs e)
