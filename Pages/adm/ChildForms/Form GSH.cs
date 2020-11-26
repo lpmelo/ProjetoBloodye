@@ -106,9 +106,9 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                 co.conectado = true;
                 co.VerificaDH(conn, idselecionado);
                 co.ExcluirH(conn, idselecionado);
-                DisplayData();
                 conn.Close();
                 conn.Dispose();
+                DisplayData();
             }
             catch(Exception erro)
             {
