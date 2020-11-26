@@ -106,6 +106,12 @@
     <Compile Include="Pages\adm\ChildForms\FormPD.Designer.cs">
       <DependentUpon>FormPD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\adm\ChildForms\FormPH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\adm\ChildForms\FormPH.Designer.cs">
+      <DependentUpon>FormPH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\adm\ChildForms\FormSobre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\adm\ChildForms\FormPD.resx">
       <DependentUpon>FormPD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\adm\ChildForms\FormPH.resx">
+      <DependentUpon>FormPH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\adm\ChildForms\FormSobre.resx">
       <DependentUpon>FormSobre.cs</DependentUpon>

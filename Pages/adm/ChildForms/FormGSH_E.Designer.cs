@@ -252,6 +252,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(550, 350);
             this.Name = "FormGSH_E";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar dados Hemocentro";
             this.Load += new System.EventHandler(this.FormGSH_E_Load);
             this.ResumeLayout(false);

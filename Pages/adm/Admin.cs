@@ -72,6 +72,7 @@ namespace ProjetoBloodye.Pages
         private void btnSHProcurar_Click(object sender, EventArgs e)
         {
             HideSubMenu(subMenuP2);
+            openChildForm(new FormPH());
         }
 
         private void btnSHContato_Click(object sender, EventArgs e)
