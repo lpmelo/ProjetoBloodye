@@ -19,11 +19,13 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
         {
             InitializeComponent();
             cbTS.Visible = false;
+            cbHemocentro.Visible = false;
             tbPesNome.Visible = false;
             tbPesCPF.Visible = false;
             lbTS.Visible = false; 
             lbNome.Visible = false;
             lbCPF.Visible = false;
+            lbHemocentro.Visible = false;
             btnProcurar.Visible = false;
             dataGridView1.Visible = false;
         }
@@ -69,6 +71,47 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                 lbCPF.Visible = false;
             }
 
+            if (cbEscolhaPD.SelectedIndex == 3)
+            {
+                cbHemocentro.Visible = true;
+                lbHemocentro.Visible = true;
+                btnProcurar.Visible = true;
+            }
+            else
+            {
+                cbHemocentro.Text = "";
+                cbHemocentro.Visible = false;
+                lbHemocentro.Visible = false;
+            }
+
+        }
+
+        private void preencheCbHemocentro()
+        {
+            try
+            {
+                string local = "bd/Administradores.accdb";
+                string Stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + local + ";Persist Security Info=False;";
+                string Query = "SELECT Codigo FROM Hemocentros ORDER BY Codigo ASC";
+                OleDbConnection conn = new OleDbConnection(Stringcon);
+                conn.Open();
+                OleDbCommand cm = new OleDbCommand(Query, conn);
+                OleDbDataReader reader = cm.ExecuteReader();
+                DataTable table = new DataTable();
+                table.Load(reader);
+                DataRow row = table.NewRow();
+                row["Codigo"] = 0;
+                table.Rows.InsertAt(row, 0);
+                this.cbHemocentro.DataSource = table;
+                this.cbHemocentro.ValueMember = "Codigo";
+                this.cbHemocentro.DisplayMember = "Codigo";
+                reader.Close();
+                conn.Close();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
         }
 
         private void btnProcurar_Click(object sender, EventArgs e)
@@ -91,8 +134,13 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
                 index = "CPF";
                 searchstring = tbPesCPF.Text;
             }
+            if (indexstring.Equals("3"))
+            {
+                index = "HEMOCENTROCADASTRADO";
+                searchstring = cbHemocentro.Text;
+            }
 
-            if (cbTS.Visible == true || tbPesNome.Visible == true || tbPesCPF.Visible == true)
+            if (cbTS.Visible == true || tbPesNome.Visible == true || tbPesCPF.Visible == true || cbHemocentro.Visible == true)
             {
                 dataGridView1.Visible = true;
                 try
@@ -114,6 +162,11 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
 
 
             }
+        }
+
+        private void FormPD_Load(object sender, EventArgs e)
+        {
+            preencheCbHemocentro();
         }
     }
 }

@@ -50,7 +50,10 @@ namespace ProjetoBloodye.cbd
         {
             if (conectado == true)
             {
-                string Query = "SELECT * FROM Doadores WHERE " + index + " LIKE '%" + TProcura + "%';";
+                string Query = "SELECT Doadores.Codigo,Doadores.Nome,Doadores.RG,Doadores.CPF,Doadores.TipoSangue," +
+                "Doadores.Endereco,Doadores.Validado,Hemocentros.Nome AS NomeHemocentro FROM Doadores " +
+                "LEFT JOIN Hemocentros ON Doadores.HemocentroCadastrado = Hemocentros.Codigo " +
+                "WHERE " + index + " LIKE '%" + TProcura + "%';";
                 OleDbCommand cm = new OleDbCommand(Query, conexao);
                 cm.CommandType = CommandType.Text;
                 OleDbDataAdapter da = new OleDbDataAdapter(cm);
