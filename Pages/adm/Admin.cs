@@ -78,6 +78,7 @@ namespace ProjetoBloodye.Pages
         private void btnSHContato_Click(object sender, EventArgs e)
         {
             HideSubMenu(subMenuP2);
+            openChildForm(new FormCH());
         }
 
         private void btnHemocentros_Click(object sender, EventArgs e)

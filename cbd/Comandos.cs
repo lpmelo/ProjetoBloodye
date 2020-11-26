@@ -404,5 +404,25 @@ namespace ProjetoBloodye.cbd
             }
         }
         #endregion
+        #region ProcurarContatoH
+        public void ProcurarContatoH(string TProcura, string index, OleDbConnection conexao, DataGridView tabela)
+        {
+            if (conectado == true)
+            {
+                string Query = "SELECT Nome,Cidade,Endereco,UF,Telefone FROM Hemocentros WHERE " + index + " LIKE '%" + TProcura + "%';";
+                OleDbCommand cm = new OleDbCommand(Query, conexao);
+                cm.CommandType = CommandType.Text;
+                OleDbDataAdapter da = new OleDbDataAdapter(cm);
+                DataTable Doadores = new DataTable();
+                da.Fill(Doadores);
+                tabela.DataSource = Doadores;
+            }
+            else
+            {
+                MessageBox.Show("Erro na conexão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        #endregion
     }
 }

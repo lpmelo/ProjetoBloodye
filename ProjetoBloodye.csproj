@@ -70,6 +70,12 @@
     <Compile Include="Pages\adm\ChildForms\FormCD.Designer.cs">
       <DependentUpon>FormCD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\adm\ChildForms\FormCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\adm\ChildForms\FormCH.Designer.cs">
+      <DependentUpon>FormCH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\adm\ChildForms\FormGSD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\adm\ChildForms\FormCD.resx">
       <DependentUpon>FormCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\adm\ChildForms\FormCH.resx">
+      <DependentUpon>FormCH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\adm\ChildForms\FormGSD.resx">
       <DependentUpon>FormGSD.cs</DependentUpon>
