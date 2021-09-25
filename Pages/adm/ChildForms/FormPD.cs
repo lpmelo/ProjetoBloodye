@@ -126,7 +126,7 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
             }
             if (indexstring.Equals("1"))
             {
-                index = "NOME";
+                index = "Doadores.nome";
                 searchstring = tbPesNome.Text;
             }
             if (indexstring.Equals("2"))
