@@ -16,5 +16,10 @@ namespace ProjetoBloodye.Pages.adm.ChildForms
         {
             InitializeComponent();
         }
+
+        private void Sobre_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -118,22 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>   O aplicativo Bloodye foi desenvolvido por mim, Lucas Pereira Melo, para fins educacionais sem
-quaisquer interesses monetários.
+    <value>   O sistema Bloodye foi desenvolvido por mim, Lucas Pereira Melo, para fins educacionais sem quaisquer interesses monetários.
 
-   O principal objetivo deste aplicativo é poder servir um controle pelos dados que são armazenados
-no banco de dados pelos outros App's, assim, tem o poder de adicionar, deletar e modificar dados
-nas tabelas.
+   O principal objetivo deste sistema é poder servir como um controle para os dados que são armazenados no banco de dados, cadastrados tanto por ele mesmo, como por outros App's. Assim, possuindo a capacidade de adicionar, deletar e modificar dados nas tabelas.
 
-   Agora, sobre o projeto Bloodye como um todo, serão dois aplicativos, este, para  o gerenciamento
-de dados por hemocentros e outro para o cadastro de doadores. Tera um banco de dados baseado
-no software do pacote Office da microsoft, Access.
+   Agora, sobre o projeto Bloodye como um todo, tem-se como ideia, este sistema, para  o gerenciamento de dados por hemocentros, um aplicativo para celulares onde os doadores possam se cadastrar direto de casa com seus dados e, para serem validados, confirmarem sua tipágem sanguínea em um Hemocentro mais próximo, e por fim, um site para divulgação de tanto o aplicativo e o sistema, quanto campanhas para determinados hemocentros com falta de algum tipo sanguíneo específico
+ 
+   O banco de dados utilizado por esse sistema, é o Microsoft Access, pois, com uma criação dinâmica de tabelas do banco e uma interface de fácil entendimento, se mostrou mais atraente para o desenvolvimento desse projeto.
 
-- Motivos pela escolha do banco de dados:
-
-   Escolhi o Acess pela sua grande facilidade de conexão com o sistema do aplicativo, e, como se trata
-de um estudo acadêmico, e não terá o objetivo de sair ao mercado, acredito que essa seja a melhor escolha.
-</value>
+   Este sistema foi criado apenas pelo fim de se tornar o Trabalho de Conclusão de Curso (TCC) do curso de Análise e Desenvolvimento de Sistemas da Fatec de Americana-SP. Sendo assim, não será lançado no mercado. </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
