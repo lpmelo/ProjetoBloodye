@@ -83,7 +83,7 @@
             this.PanelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.PanelSideMenu.Margin = new System.Windows.Forms.Padding(4);
             this.PanelSideMenu.Name = "PanelSideMenu";
-            this.PanelSideMenu.Size = new System.Drawing.Size(170, 684);
+            this.PanelSideMenu.Size = new System.Drawing.Size(170, 700);
             this.PanelSideMenu.TabIndex = 0;
             // 
             // panelLogout
@@ -91,7 +91,7 @@
             this.panelLogout.BackColor = System.Drawing.Color.DarkRed;
             this.panelLogout.Controls.Add(this.btnLogout);
             this.panelLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelLogout.Location = new System.Drawing.Point(0, 632);
+            this.panelLogout.Location = new System.Drawing.Point(0, 648);
             this.panelLogout.Name = "panelLogout";
             this.panelLogout.Size = new System.Drawing.Size(170, 52);
             this.panelLogout.TabIndex = 8;
@@ -411,14 +411,14 @@
             this.panelChildForm.Controls.Add(this.label1);
             this.panelChildForm.Location = new System.Drawing.Point(170, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(764, 684);
+            this.panelChildForm.Size = new System.Drawing.Size(780, 700);
             this.panelChildForm.TabIndex = 1;
             // 
             // linkLabel2
             // 
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(249, 658);
+            this.linkLabel2.Location = new System.Drawing.Point(249, 674);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(57, 17);
             this.linkLabel2.TabIndex = 6;
@@ -430,7 +430,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(204, 658);
+            this.label3.Location = new System.Drawing.Point(204, 674);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 5;
@@ -440,7 +440,7 @@
             // 
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(154, 658);
+            this.linkLabel1.Location = new System.Drawing.Point(154, 674);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(55, 17);
             this.linkLabel1.TabIndex = 4;
@@ -452,7 +452,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 658);
+            this.label2.Location = new System.Drawing.Point(3, 674);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 17);
             this.label2.TabIndex = 3;
@@ -462,7 +462,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(281, 180);
+            this.pictureBox1.Location = new System.Drawing.Point(289, 188);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 190);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -474,7 +474,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(245, 356);
+            this.label1.Location = new System.Drawing.Point(253, 364);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(266, 73);
             this.label1.TabIndex = 2;
@@ -484,11 +484,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 684);
+            this.ClientSize = new System.Drawing.Size(950, 700);
             this.ControlBox = false;
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.PanelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(950, 700);
